@@ -1,0 +1,454 @@
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@700&display=swap');
+
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Oswald', sans-serif;
+
+// Font Variables
+$Montserrat: 'Montserrat', sans-serif;
+$Oswald: 'Oswald', sans-serif;
+
+// Color Variables
+$header: #2E323F;
+$background: #3B4050;
+$text: #6F737F;
+$accent: #A59678;
+
+// Global Stuff
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+// Global Typography
+p {
+    font-family: $Montserrat;
+    color: #6F737F;
+}
+
+// Nav Typography
+.header-bg {
+    background-color: $header;
+}
+
+.nav__item {
+    list-style-type: none;
+    margin: .75em 0;
+}
+
+.nav__link {
+    color: white;
+    font-family: $Oswald;
+    text-decoration: none;
+    font-size: 1.125rem;
+}
+
+.nav__link:hover {
+    opacity: 0.8;
+}
+
+.nav__list {
+    margin: 0;
+    padding: 0;
+}
+
+.nav__list--primary {
+    margin-bottom: 1em;
+}
+
+.nav__link-sign-in {
+    margin-bottom: 1.5em;
+}
+
+.action-btn {
+    padding: .5em 1.5em;
+    border-radius: 100px;
+    background-color: $accent;
+    width: fit-content;
+    font-family: $Oswald;
+    color: white;
+    text-decoration: none;
+}
+
+.action-btn:hover {
+    opacity: 0.8;
+}
+
+@media (min-width: 700px) {
+    .nav__list--primary {
+        margin: 0 2em 0 0;
+    } 
+
+    .nav__list--secondary {
+        padding-bottom: 0;
+    }
+
+    .nav__item {
+        margin: 0 .5em;
+    }
+
+    .nav__list {
+        padding: 1em 0;
+    }
+
+    .action-btn {
+        padding: .5em 1em;
+    }
+}
+
+// Nav Layout
+.logo-div {
+    display: none;
+}
+
+.hamburger-div {
+    padding: 1em 0;
+}
+
+.hamburger {
+    font-size: 1.9rem;
+    color: #fff;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.hamburger:hover {
+    transform: rotate(90deg);
+}
+
+.nav__list {
+    min-width: 50%;
+    text-align: center;
+}
+
+.nav {
+    height: 0;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-toggle {
+    height: 270px;
+}
+
+@media (min-width: 700px) {
+    .hamburger-div {
+        display: none;
+    }
+
+    .logo-div {
+        display: initial;
+    }
+
+    .nav {
+        height: auto;
+        flex-direction: row;
+    }
+
+    .nav__list {
+       display: flex;
+    }
+
+    .layout-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+
+// Title Page Typography
+.main-title {
+    font-family: $Oswald;
+    color: white;
+    margin: 0;
+    font-size: 3rem;
+}
+
+.main-title::after {
+    content: "don't have to be a struggle";
+    color: $accent;
+    padding-left: .25em;
+}
+
+.description-text {
+    color: white;
+    padding: 1em 0;
+}
+
+@media (min-width: 1000px) {
+    .main-title {
+        font-size: 5.625rem;
+        line-height: 1em;
+    }
+
+    .description-text {
+        font-size: 1.5rem;
+    }
+
+    .learn-btn {
+        font-size: 1.5rem;
+    }
+}
+
+// Title Page Layout
+.bg-grey {
+    height: 100vh;
+    background-color: $background;
+}
+
+.layout-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    height: 100%;
+}
+
+@media (min-width: 700px) {
+    .layout-div {
+        flex-direction: row;
+        justify-content: center;
+        text-align: initial;
+    }
+
+    .description-div {
+        margin-left: 5em;
+    }
+}
+
+// 1st Section Typography
+.bg-lightgrey {
+    background-color: rgb(233, 229, 229);
+    padding: 1em 0;
+    
+}
+
+.text-block {
+    text-align: center;
+    padding: 2em 0;
+
+    p {
+        font-size: 1.125rem;
+    }
+}
+
+.sub-title {
+    font-family: $Oswald;
+    font-size: 1.875rem;
+    color: $accent;
+}
+
+// 1st Section Layout
+@media (min-width: 700px) {
+    .text-block {
+        max-width: 70%;
+    }
+
+    .flex-break {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(min-width: 1000px) {
+    .flex-break {
+        flex-direction: row;
+        padding: 3em 0;
+    }
+
+    .text-block + .text-block {
+        margin-left: 4em;
+    }
+}
+
+// 2nd Section Typography
+.sub-size {
+    font-size: 2.25rem;
+    margin: 0 0 1.8125rem 0;
+}
+
+.image {
+    max-width: 100%;
+    width: 100%;
+    max-height: 300px;
+}
+
+.block-title {
+    font-family: $Oswald;
+    font-size: 1.875rem;
+    color: white;
+}
+
+.img-side {
+    p {
+        font-size: 1.3125rem;
+    }
+}
+
+.block {
+    background-color: $background;
+    text-align: center;
+    padding: 1.5em;
+
+    p {
+        font-size: 1.125rem;
+        color: white;
+        opacity: 0.7;
+        margin: 1em 0 1em 0;
+        
+    }
+}
+
+.block + .block {
+    margin: 1em 0;
+}
+
+// 2nd Section Layout
+@media (min-width: 700px) {
+    .blocks-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .block {
+        max-width: 75%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .block-title--break {
+        visibility: hidden;
+    }
+
+    .blocks-div {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 5em;
+    }
+
+    .block {
+        max-width: 100%;
+    }
+
+    .block + .block {
+        margin: 1em 0;
+    }
+
+    .img-div {
+        margin: 2em 0;
+    }
+
+    .image {
+        max-height: unset;
+    }
+
+    .img-side {
+        max-width: 60%;
+    }
+
+    .flex-break-2 {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5em;
+    }
+}
+
+// Footer Typography
+.footer-title {
+    font-family: $Oswald;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.footer-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-list-title {
+    font-family: $Oswald;
+    font-size: 1.3125rem;
+    color: $accent;
+    padding: .5em 0;
+}
+
+.about-para {
+    color: white;
+    opacity: 0.7;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: white;
+    font-family: $Montserrat;
+    font-size: 1rem;
+    opacity: 0.7;
+}
+
+.footer-item {
+    padding: 1em 0;
+}
+
+.footer-wrap {
+    height: fit-content;
+}
+
+.footer-container {
+    padding: 1em 0;
+}
+
+// Footer Layout
+@media (min-width: 700px) {
+    .footer-container {
+        text-align: center;
+    }
+}
+
+@media (min-width: 1000px) {
+    .footer-container {
+        text-align: initial;
+    }
+
+    .footer-title {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .footer-layout {
+        display: flex;
+        justify-content: space-between;
+        padding: 1em 0;
+    }
+
+    .about-div {
+        max-width: 40%;
+    }
+
+    .span-block {
+        display: block;
+    }
+
+    .footer-list {
+        margin: 0;
+    }
+}
+

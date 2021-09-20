@@ -1,0 +1,467 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@700&display=swap");
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  color: #6F737F;
+}
+
+.header-bg {
+  background-color: #2E323F;
+}
+
+.nav__item {
+  list-style-type: none;
+  margin: .75em 0;
+}
+
+.nav__link {
+  color: white;
+  font-family: "Oswald", sans-serif;
+  text-decoration: none;
+  font-size: 1.125rem;
+}
+
+.nav__link:hover {
+  opacity: 0.8;
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+}
+
+.nav__list--primary {
+  margin-bottom: 1em;
+}
+
+.nav__link-sign-in {
+  margin-bottom: 1.5em;
+}
+
+.action-btn {
+  padding: .5em 1.5em;
+  border-radius: 100px;
+  background-color: #A59678;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Oswald", sans-serif;
+  color: white;
+  text-decoration: none;
+}
+
+.action-btn:hover {
+  opacity: 0.8;
+}
+
+@media (min-width: 700px) {
+  .nav__list--primary {
+    margin: 0 2em 0 0;
+  }
+  .nav__list--secondary {
+    padding-bottom: 0;
+  }
+  .nav__item {
+    margin: 0 .5em;
+  }
+  .nav__list {
+    padding: 1em 0;
+  }
+  .action-btn {
+    padding: .5em 1em;
+  }
+}
+
+.logo-div {
+  display: none;
+}
+
+.hamburger-div {
+  padding: 1em 0;
+}
+
+.hamburger {
+  font-size: 1.9rem;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.hamburger:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.nav__list {
+  min-width: 50%;
+  text-align: center;
+}
+
+.nav {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-toggle {
+  height: 270px;
+}
+
+@media (min-width: 700px) {
+  .hamburger-div {
+    display: none;
+  }
+  .logo-div {
+    display: initial;
+  }
+  .nav {
+    height: auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .layout-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.main-title {
+  font-family: "Oswald", sans-serif;
+  color: white;
+  margin: 0;
+  font-size: 3rem;
+}
+
+.main-title::after {
+  content: "don't have to be a struggle";
+  color: #A59678;
+  padding-left: .25em;
+}
+
+.description-text {
+  color: white;
+  padding: 1em 0;
+}
+
+@media (min-width: 1000px) {
+  .main-title {
+    font-size: 5.625rem;
+    line-height: 1em;
+  }
+  .description-text {
+    font-size: 1.5rem;
+  }
+  .learn-btn {
+    font-size: 1.5rem;
+  }
+}
+
+.bg-grey {
+  height: 100vh;
+  background-color: #3B4050;
+}
+
+.layout-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+@media (min-width: 700px) {
+  .layout-div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: initial;
+  }
+  .description-div {
+    margin-left: 5em;
+  }
+}
+
+.bg-lightgrey {
+  background-color: #e9e5e5;
+  padding: 1em 0;
+}
+
+.text-block {
+  text-align: center;
+  padding: 2em 0;
+}
+
+.text-block p {
+  font-size: 1.125rem;
+}
+
+.sub-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.875rem;
+  color: #A59678;
+}
+
+@media (min-width: 700px) {
+  .text-block {
+    max-width: 70%;
+  }
+  .flex-break {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (min-width: 1000px) {
+  .flex-break {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 3em 0;
+  }
+  .text-block + .text-block {
+    margin-left: 4em;
+  }
+}
+
+.sub-size {
+  font-size: 2.25rem;
+  margin: 0 0 1.8125rem 0;
+}
+
+.image {
+  max-width: 100%;
+  width: 100%;
+  max-height: 300px;
+}
+
+.block-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.875rem;
+  color: white;
+}
+
+.img-side p {
+  font-size: 1.3125rem;
+}
+
+.block {
+  background-color: #3B4050;
+  text-align: center;
+  padding: 1.5em;
+}
+
+.block p {
+  font-size: 1.125rem;
+  color: white;
+  opacity: 0.7;
+  margin: 1em 0 1em 0;
+}
+
+.block + .block {
+  margin: 1em 0;
+}
+
+@media (min-width: 700px) {
+  .blocks-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .block {
+    max-width: 75%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .block-title--break {
+    visibility: hidden;
+  }
+  .blocks-div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 5em;
+  }
+  .block {
+    max-width: 100%;
+  }
+  .block + .block {
+    margin: 1em 0;
+  }
+  .img-div {
+    margin: 2em 0;
+  }
+  .image {
+    max-height: unset;
+  }
+  .img-side {
+    max-width: 60%;
+  }
+  .flex-break-2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 5em;
+  }
+}
+
+.footer-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.footer-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-list-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.3125rem;
+  color: #A59678;
+  padding: .5em 0;
+}
+
+.about-para {
+  color: white;
+  opacity: 0.7;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.footer-item {
+  padding: 1em 0;
+}
+
+.footer-wrap {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.footer-container {
+  padding: 1em 0;
+}
+
+@media (min-width: 700px) {
+  .footer-container {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1000px) {
+  .footer-container {
+    text-align: initial;
+  }
+  .footer-title {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .footer-layout {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 1em 0;
+  }
+  .about-div {
+    max-width: 40%;
+  }
+  .span-block {
+    display: block;
+  }
+  .footer-list {
+    margin: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
