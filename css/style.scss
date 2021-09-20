@@ -300,6 +300,7 @@ p {
 .img-side {
     p {
         font-size: 1.3125rem;
+        margin: 0;
     }
 }
 
@@ -341,7 +342,6 @@ p {
 
     .blocks-div {
         flex-direction: column;
-        align-items: center;
         margin-left: 5em;
     }
 
@@ -350,7 +350,7 @@ p {
     }
 
     .block + .block {
-        margin: 1em 0;
+        margin: 1.5em 0 0 0;
     }
 
     .img-div {
@@ -369,6 +369,7 @@ p {
         display: flex;
         justify-content: space-between;
         margin-top: 5em;
+        padding-bottom: 5em;
     }
 }
 
